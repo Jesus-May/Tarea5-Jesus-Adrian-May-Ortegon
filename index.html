@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <title>Jesus Adrian May Ortegon</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="linea-rosa-superior"></div>
+    <div class="contenedor-principal">
+        <header class="cabecera">
+            <div class="logo-social">
+                <div class="logo">
+                    <img src="imagenes/logocabecera.jpg" alt="Spa Salon">
+                    <span class="spa">Spa</span> <span class="salon">Salon</span>
+                </div>
+                <div class="social">
+                    <a href="#"><img src="imagenes/icono_facebook.jpg" alt="Facebook"></a>
+                    <a href="#"><img src="imagenes/icono_instagram.jpg" alt="Instagram"></a>
+                    <a href="#"><img src="imagenes/icono_twitter.jpg" alt="Twitter"></a>
+                </div>
+            </div>
+            <div class="menu-contenedor">
+                <nav class="menu">
+                    <a href="#productos" class="menu-extremo">GALERIA</a>
+                    <a href="#Promociones">PRECIOS</a>
+                    <a href="#Promociones-video">CONTACTANOS</a>
+                    <a href="#equipo" class="menu-extremo">EQUIPO</a>
+                </nav>
+            </div>
+        </header>
+        <section id="Promociones" class="hero">
+            <img src="imagenes/fondopiedras.jpg" alt="Promociones" class="hero-img">
+            <div class="hero-contenido">
+                <h1>PROMOCIONES DE MARZO</h1>
+                <p>Se acerca la epoca de playa y por eso preparamos estas dos promociones ideales para ti.</p>
+                <div class="hero-botones">
+                    <a href="#Promociones-video" class="btn-promo">Solicitar Promoción</a>
+                    <a href="#Promociones-video" class="btn-video">ver Video</a>
+                </div>
+            </div>
+        </section>
+        <section id="productos" class="productos">
+            <div class="productos-texto">
+                <h2>Los productos Science of Beauty</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit voluptatum incidunt aut sed, vitae quas vel consequatur dolorum ullam neque assumenda totam. At expedita id minus voluptatem laudantium laboriosam! Voluptates molestias soluta dicta cumque nostrum quasi quia totam sint minima. Officiis non consequuntur molestias libero at, asperiores vero nam minima.</p>
+            </div>
+            <div class="productos-img">
+                <img src="imagenes/fotovelas.jpg" alt="Productos">
+            </div>
+        </section>
+        <section id="equipo" class="equipo">
+            <h2>Buscamos talento para integrarlos a nuestro equipo</h2>
+            <div class="equipo-contenido">
+                <div class="equipo-img">
+                    <img src="imagenes/fotoaromatizante.jpg" alt="Equipo">
+                </div>
+                <div class="equipo-puestos">
+                    <h3>Puesto de trabajo para Recepcionista</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae optio sunt provident perferendis reiciendis expedita, aliquid molestias accusamus, quod vero mayores commodi deserunt pariatur, illum distinctio. Sit sunt magnam aut.</p>
+                    <h3>Puesto de trabajo para Masajista</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae optio sunt provident perferendis reiciendis expedita, aliquid molestias accusamus, quod vero mayores commodi deserunt pariatur, illum distinctio. Sit sunt magnam aut.</p>
+                    <h3>Puesto de trabajo para Nutriologo</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae optio sunt provident perferendis reiciendis expedita, aliquid molestias accusamus, quod vero mayores commodi deserunt pariatur, illum distinctio. Sit sunt magnam aut.</p>
+                </div>
+            </div>
+        </section>
+        <section id="Promociones-video" class="noticias-instalaciones">
+            <div class="noticias">
+                <h2>Recibe noticias y promociones de SPA SALON</h2>
+                <p>Un lugar para consentirte de pies a cabeza<br>Servicio de salón estética y Spa personalizado</p>
+                <p><span class="rosa">TELEFONO:</span> <span class="negro">999 420 8871</span></p>
+                <p><span class="rosa">CORREO:</span> <span class="negro">info@spasalon.com</span></p>
+                <form id="form-correo" class="form-correo">
+                    <label for="correo-input">Tu dirección de correo electrónico</label>
+                    <input type="email" id="correo-input" placeholder="tunombre@example.com" required>
+                    <button type="button" id="btn_enviar_correo">Enviar</button>
+                    <span id="mensaje-error"></span>
+                </form>
+            </div>
+            <div class="instalaciones">
+                <h2>Nuestras Instalaciones</h2>
+                <div class="video">
+                    <iframe width="100%" height="325" src="https://www.youtube.com/embed/w4qaODLR_Xg" title="SPA RECEPTION INTERIOR DESIGN - SPA HOA PHAM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+        <footer class="pie">
+            <div class="pie-logo">
+                <img src="imagenes/logo_spa.png" alt="Spa Salon">
+            </div>
+            <div class="pie-datos">
+                Jesus Adrian May Ortegon<br>
+                Programación Web<br>
+                7SB
+            </div>
+        </footer>
+    </div>
+    <div class="linea-rosa-inferior"></div>
+    <script type="text/javascript">
+        $("#btn_enviar_correo").click(function(){
+            if ($("#correo-input").val() == "") {
+                alert("El campo correo es obligatorio");
+                $("#correo-input").focus();
+                return false;
+            }
+            var correo = $("#correo-input").val();
+            var gmailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+            if (!gmailRegex.test(correo)) {
+                alert("Por favor ingresa un correo Gmail válido.");
+                $("#correo-input").focus();
+                return false;
+            }
+            $("#form-correo")[0].submit();
+            alert("Correo enviado correctamente");
+        });
+    </script>
+</body>
+</html>
